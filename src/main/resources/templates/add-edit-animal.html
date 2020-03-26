@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Agregar animales</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+</head>
+
+<body>
+<div class="container my-5">
+    <h3> Agregar animal</h3>
+    <div class="card">
+        <div class="card-body">
+            <div class="col-md-10">
+                <form action="#" th:action="@{/createAnimal}" th:object="${animal}" method="post">
+                    <div class="row">
+                        <div class="form-group col-md-8">
+                            <label for="name" class="col-form-label"> Primer dato</label>
+                            <input type="text" th:field="*{tipo}" class="form-control" id="tipo" placeholder="tipo">
+
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="name" class="col-form-label"> Raza dato</label>
+                            <input type="text" th:field="*{raza}" class="form-control" id="raza" placeholder="raza">
+
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="name" class="col-form-label"> Pelaje dato</label>
+                            <input type="text" th:field="*{pelaje}" class="form-control" id="pelaje" placeholder="pelaje">
+
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="name" class="col-form-label"> Color dato</label>
+                            <input type="text" th:field="*{color}" class="form-control" id="color" placeholder="color">
+
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="name" class="col-form-label"> fecha dato</label>
+                            <input type="text" th:field="*{fechanacimiento}" class="form-control" id="fechaNacimiento" placeholder="fechaNacimiento">
+
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="name" class="col-form-label"> vacunas dato</label>
+                            <input type="text" th:field="*{vacunas}" class="form-control" id="vacunas" placeholder="vacunas">
+
+                        </div>
+
+                        <div class="col-md-6">
+                            <input type="submit" class="btn btn-primary" th:value="Submit">
+                        </div>
+                        <input type="hidden" id="id" th:field="*{id}">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
